@@ -1,0 +1,145 @@
+/* ========================================
+   TIMUNOVA - Complete Styling
+   ======================================== */
+
+/* CSS Variables */
+:root {
+  --primary-green: #2d7a3e;
+  --primary-green-dark: #1f5a2d;
+  --primary-green-light: #4caf50;
+  --accent-lime: #8bc34a;
+  --earth-brown: #6d4c41;
+  --sky-blue: #4fc3f7;
+  --sun-yellow: #ffd54f;
+  --soil-dark: #3e2723;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #424242;
+  --gradient-primary: linear-gradient(135deg, #2d7a3e 0%, #4caf50 100%);
+  --gradient-accent: linear-gradient(135deg, #8bc34a 0%, #aed581 100%);
+  --gradient-earth: linear-gradient(135deg, #6d4c41 0%, #8d6e63 100%);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gradient-primary) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(45, 122, 62, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 122, 62, 0.4);
+}
+
+.bg-primary {
+  background: var(--gradient-primary) !important;
+}
+
+/* Navbar */
+.navbar-dark.bg-primary {
+  background: var(--primary-green) !important;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--primary-green-dark);
+  letter-spacing: -0.5px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-green-dark);
+}
+
+/* Stats Card */
+.stats-card {
+  background: var(--white);
+  border-left: 4px solid var(--primary-green);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 24px rgba(45, 122, 62, 0.15);
+}
+
+/* Forms */
+.form-control:focus {
+  border-color: var(--primary-green) !important;
+  box-shadow: 0 0 0 0.2rem rgba(45, 122, 62, 0.25) !important;
+}
+
+/* Alerts */
+.alert {
+  border-left: 4px solid;
+  border-radius: 8px;
+}
+
+.alert-success {
+  border-left-color: var(--primary-green);
+  background: rgba(45, 122, 62, 0.1);
+}
+
+/* Progress */
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background: var(--light-gray);
+}
+
+.progress-bar {
+  background: var(--gradient-primary);
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
