@@ -127,7 +127,7 @@ const Controlling = () => {
         {/* Header */}
         <div className="row mb-4">
           <div className="col-md-12">
-            <h1 className="mb-2">🎮 Controlling & ML Detection</h1>
+            <h1 className="mb-2"> Controlling & ML Detection</h1>
             <p className="text-muted">
               Sistem kontrol dan deteksi kondisi tanaman timun menggunakan Machine Learning
             </p>
@@ -139,7 +139,7 @@ const Controlling = () => {
           <div className="col-md-3 mb-3">
             <div className="card shadow-sm border-primary">
               <div className="card-body text-center">
-                <div className="text-primary fs-1 mb-2">📷</div>
+                <div className="text-primary fs-1 mb-2"></div>
                 <h6 className="text-muted">Status Kamera</h6>
                 <h5 className={isCameraActive ? 'text-success' : 'text-secondary'}>
                   {isCameraActive ? 'Aktif' : 'Tidak Aktif'}
@@ -150,7 +150,7 @@ const Controlling = () => {
           <div className="col-md-3 mb-3">
             <div className="card shadow-sm border-success">
               <div className="card-body text-center">
-                <div className="text-success fs-1 mb-2">🖼️</div>
+                <div className="text-success fs-1 mb-2"></div>
                 <h6 className="text-muted">Gambar Captured</h6>
                 <h5>{capturedImage ? '1' : '0'}</h5>
               </div>
@@ -159,7 +159,7 @@ const Controlling = () => {
           <div className="col-md-3 mb-3">
             <div className="card shadow-sm border-info">
               <div className="card-body text-center">
-                <div className="text-info fs-1 mb-2">🤖</div>
+                <div className="text-info fs-1 mb-2"></div>
                 <h6 className="text-muted">ML Status</h6>
                 <h5>{isProcessing ? '⏳ Processing' : mlResult ? '✓ Done' : 'Standby'}</h5>
               </div>
@@ -168,7 +168,7 @@ const Controlling = () => {
           <div className="col-md-3 mb-3">
             <div className="card shadow-sm border-warning">
               <div className="card-body text-center">
-                <div className="text-warning fs-1 mb-2">📊</div>
+                <div className="text-warning fs-1 mb-2"></div>
                 <h6 className="text-muted">Accuracy</h6>
                 <h5>{mlResult ? `${mlResult.confidence}%` : '-'}</h5>
               </div>
@@ -192,7 +192,7 @@ const Controlling = () => {
           <div className="col-lg-6 mb-4">
             <div className="card shadow-sm h-100">
               <div className="card-header bg-primary text-white">
-                <h5 className="mb-0">📷 Camera Feed</h5>
+                <h5 className="mb-0"> Camera Feed</h5>
               </div>
               <div className="card-body">
                 {/* Video Preview */}
@@ -244,7 +244,7 @@ const Controlling = () => {
                           className="btn btn-primary w-100"
                           onClick={captureImage}
                         >
-                          📸 Capture
+                           Capture
                         </button>
                       </div>
                       <div className="col-6">
@@ -269,7 +269,7 @@ const Controlling = () => {
           <div className="col-lg-6 mb-4">
             <div className="card shadow-sm h-100">
               <div className="card-header bg-success text-white">
-                <h5 className="mb-0">🤖 ML Detection Result</h5>
+                <h5 className="mb-0"> ML Detection Result</h5>
               </div>
               <div className="card-body">
                 {/* Captured Image Preview */}
@@ -293,11 +293,11 @@ const Controlling = () => {
                         {isProcessing ? (
                           <>
                             <span className="spinner-border spinner-border-sm me-2"></span>
-                            🔄 Memproses...
+                             Memproses...
                           </>
                         ) : (
                           <>
-                            🤖 Proses dengan ML
+                             Proses dengan ML
                           </>
                         )}
                       </button>
@@ -320,11 +320,11 @@ const Controlling = () => {
                         </h5>
                         <hr />
                         <div className="mb-2">
-                          <strong>🔍 Deteksi:</strong>
+                          <strong> Deteksi:</strong>
                           <div className="fs-5 mt-1">{mlResult.deteksi}</div>
                         </div>
                         <div className="mb-2">
-                          <strong>📊 Confidence:</strong>
+                          <strong> Confidence:</strong>
                           <div className="progress mt-1" style={{ height: '25px' }}>
                             <div 
                               className={`progress-bar bg-${mlResult.color}`}
@@ -335,11 +335,11 @@ const Controlling = () => {
                           </div>
                         </div>
                         <div className="mb-2">
-                          <strong>📈 Kondisi:</strong>
+                          <strong> Kondisi:</strong>
                           <span className={`badge bg-${mlResult.color} ms-2`}>{mlResult.kondisi}</span>
                         </div>
                         <div className="mb-0">
-                          <strong>💡 Rekomendasi:</strong>
+                          <strong> Rekomendasi:</strong>
                           <div className="mt-1">{mlResult.rekomendasi}</div>
                         </div>
                       </div>
@@ -347,7 +347,7 @@ const Controlling = () => {
                   </>
                 ) : (
                   <div className="text-center text-muted py-5">
-                    <div style={{ fontSize: '5rem', opacity: 0.3 }}>🖼️</div>
+                    <div style={{ fontSize: '5rem', opacity: 0.3 }}></div>
                     <h5 className="mt-3">Belum Ada Gambar</h5>
                     <p className="small">Capture gambar dari kamera untuk memulai deteksi ML</p>
                   </div>
@@ -362,7 +362,7 @@ const Controlling = () => {
           <div className="col-md-12">
             <div className="card shadow-sm">
               <div className="card-header bg-light">
-                <h5 className="mb-0">📖 Panduan Penggunaan</h5>
+                <h5 className="mb-0"> Panduan Penggunaan</h5>
               </div>
               <div className="card-body">
                 <div className="row">
@@ -379,11 +379,11 @@ const Controlling = () => {
                   <div className="col-md-6">
                     <h6 className="text-success mb-3">Tips Penggunaan:</h6>
                     <ul className="mb-3">
-                      <li className="mb-2">📸 Pastikan pencahayaan cukup terang</li>
-                      <li className="mb-2">🎯 Fokuskan kamera pada daun atau buah</li>
-                      <li className="mb-2">📏 Jarak ideal: 20-30 cm dari tanaman</li>
-                      <li className="mb-2">🔍 Hindari gambar blur atau goyang</li>
-                      <li className="mb-2">✅ Izinkan akses kamera pada browser</li>
+                      <li className="mb-2"> Pastikan pencahayaan cukup terang</li>
+                      <li className="mb-2"> Fokuskan kamera pada daun atau buah</li>
+                      <li className="mb-2"> Jarak ideal: 20-30 cm dari tanaman</li>
+                      <li className="mb-2"> Hindari gambar blur atau goyang</li>
+                      <li className="mb-2"> Izinkan akses kamera pada browser</li>
                     </ul>
                   </div>
                 </div>

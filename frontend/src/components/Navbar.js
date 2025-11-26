@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
+
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
-  const location = useLocation();
 
   const handleLogout = () => {
     logout();
@@ -14,19 +14,16 @@ const Navbar = () => {
 
   if (!user) return null;
 
-  // Check active link
-  const isActive = (path) => location.pathname === path;
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
       <div className="container-fluid">
-        <Link className="navbar-brand fw-bold" to="/home">
+        <NavLink className="navbar-brand fw-bold" to="/home">
           TimuNova
-        </Link>
+        </NavLink>
         <button 
           className="navbar-toggler" 
           type="button" 
-          data-bs-toggle="collapse" 
+          data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>
@@ -34,44 +31,55 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/home') ? 'active fw-bold' : ''}`}
+              <NavLink 
+                className={({ isActive }) => `nav-link${isActive ? ' active fw-bold' : ''}`}
                 to="/home"
+                end
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/monitoring') ? 'active fw-bold' : ''}`}
+              <NavLink 
+                className={({ isActive }) => `nav-link${isActive ? ' active fw-bold' : ''}`}
                 to="/monitoring"
               >
                 Monitoring
-              </Link>
+              </NavLink>
             </li>
+            {user.role === 'admin' && (
+              <li className="nav-item">
+                <NavLink
+                  to="/kelola-user"
+                  className={({ isActive }) => `nav-link${isActive ? ' active fw-bold' : ''}`}
+                >
+                  Kelola User
+                </NavLink>
+              </li>
+            )}
             <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/panduan') ? 'active fw-bold' : ''}`}
+              <NavLink 
+                className={({ isActive }) => `nav-link${isActive ? ' active fw-bold' : ''}`}
                 to="/panduan"
               >
                 Panduan
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/profil') ? 'active fw-bold' : ''}`}
+              <NavLink 
+                className={({ isActive }) => `nav-link${isActive ? ' active fw-bold' : ''}`}
                 to="/profil"
               >
                 Profil
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link 
-                className={`nav-link ${isActive('/controlling') ? 'active fw-bold' : ''}`}
+              <NavLink 
+                className={({ isActive }) => `nav-link${isActive ? ' active fw-bold' : ''}`}
                 to="/controlling"
               >
                 Controlling
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
               <button 

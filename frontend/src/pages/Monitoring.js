@@ -268,7 +268,7 @@ const Monitoring = () => {
     >
       <div style={styles.container}>
         <div style={styles.header}>
-          <h1>📊 Monitoring Dashboard</h1>
+          <h1>Monitoring Dashboard</h1>
           <button onClick={() => setShowAddForm(!showAddForm)} style={styles.addButton}>
             {showAddForm ? 'Batal' : '+ Tambah Bedeng'}
           </button>
