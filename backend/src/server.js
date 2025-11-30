@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/monitoring', require('./routes/monitoringRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));  // ✅ TAMBAHKAN INI
 
 // Health check
 app.get('/', (req, res) => {
